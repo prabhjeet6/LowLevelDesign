@@ -1,3 +1,4 @@
+package basics;
 public class MethodChaining {
     public static void main(String[] args) {
         Student student = new Student("Prabhjeet", "singh.92prabhjeet@gmail.com");
