@@ -1,4 +1,4 @@
-package designpatterns.abstractfactorydesignpattern;
+package designpatterns.abstractfactorydesignpattern.example1;
 
 public class Cappuccino extends Coffee{
     Cappuccino(IndgredientsFactory indgredientsFactory) {

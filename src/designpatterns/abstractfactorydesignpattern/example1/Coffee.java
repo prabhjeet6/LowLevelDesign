@@ -1,4 +1,4 @@
-package designpatterns.abstractfactorydesignpattern;
+package designpatterns.abstractfactorydesignpattern.example1;
 
 public abstract class Coffee {
     private final Milk milk;
