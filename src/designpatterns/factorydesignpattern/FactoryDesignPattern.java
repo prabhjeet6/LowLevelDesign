@@ -1,4 +1,4 @@
-package designpatterns;
+package designpatterns.factorydesignpattern;
 //Creational Design Pattern
 public class FactoryDesignPattern {
     public static void main(String[] arg) throws Exception {

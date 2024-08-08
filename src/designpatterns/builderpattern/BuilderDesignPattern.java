@@ -1,4 +1,4 @@
-package designpatterns;
+package designpatterns.builderpattern;
 //Creational Design Pattern
 public class BuilderDesignPattern {
     public static void main(String[] arg) {
