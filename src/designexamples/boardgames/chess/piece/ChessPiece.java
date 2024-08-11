@@ -1,6 +1,7 @@
 package designexamples.boardgames.chess.piece;
 
 import designexamples.boardgames.chess.ChessBoard;
+import designexamples.boardgames.chess.ChessCell;
 import designexamples.boardgames.chess.PieceName;
 
 public interface ChessPiece {
@@ -9,6 +10,6 @@ public interface ChessPiece {
 
     void setDead(boolean isDead);
 
-    void move(ChessPiece source,ChessPiece destination, ChessBoard chessBoard);
+    void move(ChessCell source, ChessCell destination, ChessBoard chessBoard);
 
 }

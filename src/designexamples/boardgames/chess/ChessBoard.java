@@ -3,9 +3,11 @@ package designexamples.boardgames.chess;
 import designexamples.boardgames.Board;
 import designexamples.boardgames.Move;
 import designexamples.boardgames.Pair;
+import designexamples.boardgames.chess.piece.ChessPiece;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ChessBoard implements Board {
     private List<List<ChessCell>> cells;
@@ -34,8 +36,12 @@ public class ChessBoard implements Board {
 
     @Override
     public void applyMove(Move move) {
-
+        ChessCell sourceCell = getCell(move.getSource());
+        ChessPiece currentPiece =
+                sourceCell.getChessPiece().get();
+        currentPiece.move(sourceCell, getCell(move.getDestination()), this);
     }
+
 
     @Override
     public void display() {
@@ -54,4 +60,8 @@ public class ChessBoard implements Board {
     public ChessCell getCell(Pair chosenSpot) {
         return cells.get(chosenSpot.getX()).get(chosenSpot.getY());
     }
+    public void putPiece(ChessPiece chessPiece, int row, int col) {
+        cells.get(row).get(col).setChessPiece(Optional.of(chessPiece));
+    }
 }
+
