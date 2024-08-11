@@ -13,7 +13,7 @@ public class ChessCell {
     private  Optional<ChessPiece> chessPiece;
 
 
-    public ChessCell(int x, int y, Optional<ChessPiece> chessPiece) {
+    public ChessCell(int x, int y) {
         this.x = x;
         this.y = y;
         this.chessPiece = chessPiece;

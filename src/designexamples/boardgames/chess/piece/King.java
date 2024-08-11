@@ -16,7 +16,7 @@ public class King implements ChessPiece{
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 
     @Override

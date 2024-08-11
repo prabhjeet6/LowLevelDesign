@@ -15,7 +15,7 @@ public class Queen implements ChessPiece{
         this.isDead = isDead;
     }
     public Color getColor() {
-        return color;
+        return this.color;
     }
 
     @Override

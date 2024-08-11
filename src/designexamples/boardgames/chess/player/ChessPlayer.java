@@ -13,12 +13,18 @@ public abstract class ChessPlayer extends Player {
     private final Map<PieceName, ChessPiece> pieces;
 
     private final ChessBoard chessBoard;
+
+
+
     protected ChessPlayer(String name, Map<PieceName, ChessPiece> pieces, ChessBoard chessBoard) {
         super(name);
         this.pieces = pieces;
         this.chessBoard = chessBoard;
     }
 
+    public ChessBoard getChessBoard() {
+        return this.chessBoard;
+    }
     public Map<PieceName, ChessPiece> getPieces() {
         return pieces;
     }

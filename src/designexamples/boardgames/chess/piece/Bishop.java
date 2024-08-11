@@ -17,7 +17,7 @@ public class Bishop implements ChessPiece{
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 
     @Override
