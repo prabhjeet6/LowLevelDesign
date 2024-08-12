@@ -1,6 +1,7 @@
 package designexamples.boardgames.chess.piece;
 
 import designexamples.boardgames.chess.ChessBoard;
+import designexamples.boardgames.chess.ChessCell;
 import designexamples.boardgames.chess.Color;
 import designexamples.boardgames.chess.PieceName;
 
@@ -34,7 +35,8 @@ public class Rook implements ChessPiece{
     }
 
     @Override
-    public void move(ChessPiece source, ChessPiece destination, ChessBoard chessBoard) {
+    public void move(ChessCell source, ChessCell destination, ChessBoard chessBoard) {
 
     }
+
 }
