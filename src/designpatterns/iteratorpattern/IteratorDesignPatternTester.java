@@ -3,6 +3,9 @@ package designpatterns.iteratorpattern;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//Iterator Design Pattern is a behavourial design Pattern  that provides a way to access elements of a collection
+//sequentially without exposing underlying representation/Implementation of collection
 public class IteratorDesignPatternTester {
     public static void main(String[] arg){
         TreeNode root=new TreeNode(1,null,null);
