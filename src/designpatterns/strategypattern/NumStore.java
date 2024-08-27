@@ -9,7 +9,7 @@ import java.util.List;
 //Dynamically chooses the strategy for search and insert and search at runtime
 
 // This code satisfies SOLID principles, specifically, open close principle and Dependency Injection principle
-public class NumStore {
+public class   NumStore {
     private final Inserter inserter;
     private final Searcher searcher;
     private final List<Integer> numbers=new ArrayList<>();
