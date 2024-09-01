@@ -12,6 +12,7 @@ public class JSONParserTester {
         JSON json = parser.parse(jsonText);
         System.out.println(parser.toString(json
                 .get("sem-2").get("Lab").get("Parallel Computing")));
+        System.out.println(parser.parse("{\"a\":\"b\"}"));
 
 
     }
