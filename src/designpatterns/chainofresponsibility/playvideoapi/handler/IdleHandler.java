@@ -1,7 +1,7 @@
-package designpatterns.chainofresponsibility.apihandlers.handler;
+package designpatterns.chainofresponsibility.playvideoapi.handler;
 
 
-import designpatterns.chainofresponsibility.apihandlers.data.Request;
+import designpatterns.chainofresponsibility.playvideoapi.data.Request;
 
 public class IdleHandler implements RequestHandler{
     @Override

@@ -1,7 +1,7 @@
-package designpatterns.chainofresponsibility.apihandlers.handler;
+package designpatterns.chainofresponsibility.playvideoapi.handler;
 
-import designpatterns.chainofresponsibility.apihandlers.data.Request;
-import designpatterns.chainofresponsibility.apihandlers.manager.TokenManager;
+import designpatterns.chainofresponsibility.playvideoapi.data.Request;
+import designpatterns.chainofresponsibility.playvideoapi.manager.TokenManager;
 
 public class AuthenticationHandler implements RequestHandler{
     private final RequestHandler nextHandler;

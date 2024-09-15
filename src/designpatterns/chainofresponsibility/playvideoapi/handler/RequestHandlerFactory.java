@@ -1,7 +1,7 @@
-package designpatterns.chainofresponsibility.apihandlers.handler;
+package designpatterns.chainofresponsibility.playvideoapi.handler;
 
 
-import designpatterns.chainofresponsibility.apihandlers.manager.TokenManager;
+import designpatterns.chainofresponsibility.playvideoapi.manager.TokenManager;
 
 public class RequestHandlerFactory {
     private RequestHandlerFactory(){

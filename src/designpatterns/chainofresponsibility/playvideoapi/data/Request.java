@@ -1,4 +1,4 @@
-package designpatterns.chainofresponsibility.apihandlers.data;
+package designpatterns.chainofresponsibility.playvideoapi.data;
 
 public class Request {
     private final String header;

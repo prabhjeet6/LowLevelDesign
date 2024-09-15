@@ -1,5 +1,5 @@
-package designpatterns.chainofresponsibility.apihandlers.handler;
-import designpatterns.chainofresponsibility.apihandlers.data.Request;
+package designpatterns.chainofresponsibility.playvideoapi.handler;
+import designpatterns.chainofresponsibility.playvideoapi.data.Request;
 public class ValidationHandler implements RequestHandler{
     private final RequestHandler nextHandler;
 
