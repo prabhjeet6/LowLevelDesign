@@ -13,6 +13,7 @@ public class Worker implements Runnable{
         this.nums = nums;
     }
 
+
     @Override
     public void run() {
      long s=0L;
