@@ -34,8 +34,19 @@ class NumberStore{
         //Due to race conditions we do not get the desired value
         //adding the increment operation in synchronized block or marking
         // the method itself as synchronized resolves the issue
+
         x++;
     }
+    /*
+    //if a synchronized block is placed on an Object and different objects are passed in worker's NumberStore
+    //reference, then locks will be on different objects hence, two threads will be able to access
+    //critical section simultaneously
+
+    public  void increment(Object  o){
+       synchronized(o){
+        x++;
+        }
+    }*/
     NumberStore(){
         this.x=0;
     }
