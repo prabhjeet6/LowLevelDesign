@@ -5,7 +5,9 @@ class Number {
         x = 0;
     }
 
-    int x;
+    volatile int x;
+    //volatile prevents memory visibility problem; synchronized prevents Race conditions. Both coupled together
+    // give completely thread-safe code
 
     public synchronized int getX() {
         return x;

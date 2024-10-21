@@ -8,7 +8,7 @@ public class Main {
      Thread t2=new Thread(worker);
      t1.start();
      t2.start();
-     t1.join();
+     t1.join();//main thread waits until t1 finishes
      t2.join();
      System.out.println(number.getX());
 
