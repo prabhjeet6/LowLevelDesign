@@ -1,4 +1,4 @@
-package basics.concurrency.memoryvisibilityandotherconcerns.codingexcersice;
+package basics.concurrency.memoryvisibilityandotherconcerns.codingexcersice.challange1;
 
 public class SequentialExecutionOfThreadsWithRounds {
     //Using current=0 instead of 1 as in the previous 'SequentialExcecutionOfThreads'

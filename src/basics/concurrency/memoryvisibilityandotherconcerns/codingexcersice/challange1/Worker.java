@@ -1,4 +1,6 @@
-package basics.concurrency.memoryvisibilityandotherconcerns.codingexcersice;
+package basics.concurrency.memoryvisibilityandotherconcerns.codingexcersice.challange1;
+
+import basics.concurrency.memoryvisibilityandotherconcerns.codingexcersice.challange1.SequentialExecutionOfThreadsWithRounds;
 
 public class Worker implements Runnable {
     @Override
