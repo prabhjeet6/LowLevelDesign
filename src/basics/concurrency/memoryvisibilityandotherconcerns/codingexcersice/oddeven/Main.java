@@ -4,6 +4,7 @@ public class Main {
      public static final int limit=20;
      public static volatile int current=1;
     public static void main(String[]a){
+        //Even if we use multiple threads with this approach, it will work
         Object lock=new Object();
         Thread oddThread=new Thread(new OddWorker("Odd Worker",lock));
         Thread evenThread=new Thread(new EvenWorker("Even Worker",lock));
