@@ -14,7 +14,7 @@ public class Worker implements Runnable {
         //main thread gets same treatment as others. When CPU executes any line of code,
         // it reads the instructions and data , these instructions are fetched from RAM
         //  and stored in registers so that CPU can actually read it.
-        while (compare()) {
+        while (compare()) {//Busy waiting or spin lock
         }
         System.out.println(val);
         synchronized (lock) {
@@ -22,6 +22,22 @@ public class Worker implements Runnable {
         }
 
     }
+    //Alternative: Using wait and notify instead of busy waiting/spin lock
+    /* @Override
+    public void run(){
+        synchronized (lock){
+            try {
+                while(this.val > SequentialExecutionOfThreads.current){
+                    lock.wait();
+                }
+                SequentialExecutionOfThreads.current++;
+                System.out.println(val);
+                lock.notifyAll();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }*/
 
     private boolean compare() {
         boolean ans;

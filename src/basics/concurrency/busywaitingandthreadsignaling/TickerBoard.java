@@ -3,22 +3,21 @@ package basics.concurrency.busywaitingandthreadsignaling;
 import java.util.List;
 
 public class TickerBoard {
-    public int current;
+
     private final List<Integer> appointments;
+    private int curr;
 
     public TickerBoard(List<Integer> appointments) {
-        this.current = 0;
         this.appointments = appointments;
+        this.curr = 0;
     }
 
-    public synchronized boolean isMyTurn(int appointmentId) {
-        if (this.current == appointments.size()) {
-            throw new RuntimeException("No more appointments");
-        }
-        if (this.current != appointmentId) {
-            return false;
-        }
-        this.current++;
+
+    public boolean isMyTurn(Integer appointmentId){
+        if(curr == appointments.size()) throw new RuntimeException("No more assignments");
+        if(curr != appointmentId) return false;
+        curr++;
         return true;
     }
+
 }

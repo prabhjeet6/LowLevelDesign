@@ -1,19 +1,29 @@
 package basics.concurrency.busywaitingandthreadsignaling;
 
 public class Customer implements Runnable {
-    private final int appointmentId;
-    private final TickerBoard tickerBoard;
 
-    public Customer(int appointmentId, TickerBoard tickerBoard) {
+    private final Integer appointmentId;
+    private final TickerBoard TickerBoard;//monitor to get the lock upon
+
+    public Customer(Integer appointmentId, TickerBoard TickerBoard) {
         this.appointmentId = appointmentId;
-        this.tickerBoard = tickerBoard;
+        this.TickerBoard = TickerBoard;
     }
+
 
     @Override
     public void run() {
-        while (!this.tickerBoard.isMyTurn(this.appointmentId)) {
-            System.out.println(this.appointmentId + " denied entry");
+        synchronized (TickerBoard) {
+            while (!TickerBoard.isMyTurn(appointmentId)) {
+                try {
+                    System.out.println("Entry denied: " + appointmentId);
+                    TickerBoard.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println("Hi I am appointment id: " + appointmentId);
+            TickerBoard.notifyAll();
         }
-        System.out.println(this.appointmentId + " allowed entry");
     }
 }
