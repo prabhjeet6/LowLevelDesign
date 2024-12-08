@@ -27,7 +27,7 @@ public class MyQueue {
 
     public void push(int num) {
         if (isFull()) {
-            throw new RuntimeException("Queue is Overflowed!!");
+            throw new RuntimeException("Queue  Overflow!!");
         }
         this.queue.add(num);
         rear++;
@@ -35,7 +35,7 @@ public class MyQueue {
 
     public int pop() {
         if (isEmpty()) {
-            throw new RuntimeException("Queue is Underflowed!!");
+            throw new RuntimeException("Queue  Underflow!!");
         }
         return this.queue.get(front++);
     }

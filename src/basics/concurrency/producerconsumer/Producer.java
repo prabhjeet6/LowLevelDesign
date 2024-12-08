@@ -11,7 +11,7 @@ public class Producer implements Runnable {
     public void run() {
         for (int i = 0; i < 500; i++) {
             synchronized (queue) {
-                if (queue.isFull()) {
+                while (queue.isFull()) {
                     try {
                         queue.wait();
                     } catch (InterruptedException e) {
@@ -29,7 +29,10 @@ public class Producer implements Runnable {
         synchronized (queue) {
             //wait if the queue is full, else push to queue, as queue is a shared resource,
             // operate upon it only inside a synchronized block
-            if (queue.isFull()) {
+
+            //In case of multiple producers, if queue is full, and consumer pops up, and two producers get notified, one producer pushes and then the
+            //second producer tries pushing, it throws exception since the queue is full now, hence we use while loop at line 35 instead of only if check
+            while (queue.isFull()) {
                 try {
                     queue.wait();
                 } catch (InterruptedException e) {
